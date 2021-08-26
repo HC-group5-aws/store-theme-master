@@ -1,0 +1,162 @@
+{
+  "vtex.menu@2.x:menu#websites": {
+    "props": {
+      "experimentalOptimizeRendering": true
+    },
+    "children": [
+      /*       "menu-item#shop",
+      "menu-item#about-us", */
+      //"menu-item#category-suporte"
+    ]
+  },
+  "vtex.menu@2.x:menu#websites2": {
+    "props": {
+      "experimentalOptimizeRendering": true
+    },
+    "children": [
+      "menu-item#category-entre-em-contato",
+      "menu-item#category-suporte"
+    ]
+  },
+  //*********************************
+  "menu-item#category-entre-em-contato": {
+    "props": {
+      "id": "menu-item-category-entre-em-contato",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/entre-em-contato/",
+        "noFollow": false,
+        "tagTitle": "entre-em-contato",
+        "text": "Entre em contato conosco"
+      }
+    }
+  },
+  "menu-item#category-suporte": {
+    "props": {
+      "id": "menu-item-suporte",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/suporte/",
+        "noFollow": false,
+        "tagTitle": "suporte",
+        "text": "Suporte"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#suporte"
+    ]
+  },
+  "vtex.menu@2.x:submenu#suporte": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#suporte"
+    ]
+  },
+  "vtex.menu@2.x:menu#suporte": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      //"menu-item#category-centro-de-suporte",
+      //"menu-item#category-central-de-conhecimento",
+      "menu-item#category-visao-geral-aws-suporte",
+      "menu-item#category-visao-geral-aws-suporte"
+    ]
+  },
+  "menu-item#category-visao-geral-aws-suporte": {
+    "props": {
+      "id": "menu-item-category-visao-geral-aws-suporte",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/visao-geral-aws-suporte/",
+        "noFollow": false,
+        "tagTitle": "idioma",
+        "text": "Idioma"
+      }
+    }
+  },
+  "menu-item#category-minha-conta": {
+    "props": {
+      "id": "menu-item-category-minha-conta",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/minha-conta/",
+        "noFollow": false,
+        "tagTitle": "minha-conta",
+        "text": "Minha conta"
+      }
+    }
+  },
+  //**********************************
+  "menu-item#shop": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Shop",
+        "text": "Shop"
+      }
+    },
+    "children": []
+  },
+  // ****** AMAZON
+  "menu#aws": {
+    "children": [
+      "menu-item#category-entre-em-contato",
+      "menu-item#category-suporte",
+      "menu-item#category-visao-geral-aws-suporte",
+      "menu-item#category-minha-conta"
+    ],
+    "props": {
+      "blockClass": "menu-link",
+      "orientation": "horizontal",
+      "type": "custom"
+    }
+  },
+  // **************************************
+  "vtex.menu@2.x:menu#institutional": {
+    "children": [
+      "menu-item#vtex-website"
+    ]
+  },
+  "buy-button#product": { // POde Excluir
+    "props": {
+      "isOneClickBuy": false,
+      "showTooltipOnSkuNotSelected": false
+    }
+  },
+  "menu-item#vtex-website": {
+    "props": {
+      "id": "menu-item-vtex-website",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "external",
+        "href": "http://vtex.com",
+        "noFollow": false,
+        "tagTitle": "visit vtex.com",
+        "text": "visit vtex.com"
+      }
+    }
+  }
+}

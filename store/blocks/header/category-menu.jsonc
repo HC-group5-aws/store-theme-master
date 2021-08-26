@@ -1,14 +1,70 @@
+// Aqui contem todas as categorias de MENUS
 {
-  "vtex.menu@2.x:menu#category-menu": {
+  "vtex.menu@2.x:menu#category-menu": { // Segunda Barra de Menu .
     "props": {
       "experimentalOptimizeRendering": true
     },
     "children": [
+      "menu-item#category-suporte", // top-menu.jsonc
+      "menu-item#category-produtos",
+      "menu-item#category-solucoes",
+      "menu-item#category-definicao-de-preco",
       "menu-item#category-apparel",
       "menu-item#category-home",
       "menu-item#more"
     ]
   },
+  //
+  // MENUS DA AMAZON
+  // Produtos Soluções Definição de preço Documentação Aprenda Rede de parceiros AWS Marketplace Capacitação de clientes Eventos Explore mais
+  "menu-item#category-produtos": {
+    "props": {
+      "id": "menu-item-category-produtos",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/Produtos/",
+        "noFollow": false,
+        "tagTitle": "Produtos",
+        "text": "Produtos"
+      }
+    }
+  },
+  "menu-item#category-solucoes": {
+    "props": {
+      "id": "menu-item-category-solucoes",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/solucoes/",
+        "noFollow": false,
+        "tagTitle": "Soluções",
+        "text": "Soluções"
+      }
+    }
+  },
+  "menu-item#category-definicao-de-preco": {
+    "props": {
+      "id": "menu-item-category-definicao-de-preco",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/definicao-de-preco/",
+        "noFollow": false,
+        "tagTitle": "Definição de preço",
+        "text": "Definição de preço"
+      }
+    }
+  },
+  // ******************************************
+  //  AWS 
+  // ***********************************************
   "menu-item#category-apparel": {
     "props": {
       "id": "menu-item-category-apparel",

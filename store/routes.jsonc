@@ -1,0 +1,24 @@
+{
+  "store.custom#about-us": {
+    "path": "/about-us"
+  },
+  "store.custom#faq": {
+    "path": "/faq"
+  },
+  "store.custom#contact-us": {
+    "path": "/contact-us"
+  },
+  //  Entre em contato conosco; Suporte ;Português ;Minha conta; 
+  "store.custom#entre-em-contato": {
+    "path": "/entre-em-contato"
+  },
+  "store.custom#suporte": {
+    "path": "/suporte"
+  },
+  "store.custom#idioma": {
+    "path": "/idioma"
+  },
+  "store.custom#minha-conta": {
+    "path": "/minha-conta"
+  }
+}

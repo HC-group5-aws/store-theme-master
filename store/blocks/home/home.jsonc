@@ -5,24 +5,106 @@
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
-      "flex-layout.row#deals",
-      "rich-text#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",
+      //"flex-layout.row#deals",
+      //"rich-text#shelf-title",
+      //"flex-layout.row#shelf",
+      "flex-layout.row#box-0",
+      //"info-card#home",
+      "rich-text#confira-as-solucoes",
       "rich-text#question",
       "rich-text#link",
-      "newsletter"
+      "newsletter",
+      "back-to-top-button",
+      "rich-text#titulo"
     ]
   },
-
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
+  //**********
+  "flex-layout.row#box-0": {
+    "children": [
+      "flex-layout.row#box-1"
+    ],
     "props": {
-      "height": 720,
+      "blockClass": [
+        "box-a"
+      ]
+    }
+  },
+  "flex-layout.row#box-1": {
+    "children": [
+      "flex-layout.col#box01",
+      "flex-layout.col#box01",
+      "flex-layout.col#box01",
+      "flex-layout.col#box01"
+    ],
+    "props": {
+      "blockClass": [
+        "box-a"
+      ]
+    }
+  },
+  "flex-layout.col#box01": {
+    "props": {
+      "blockClass": [
+        "sun"
+      ]
+    },
+    "children": [
+      "image#box01",
+      "rich-text#box01-titulo",
+      "rich-text#box01-texto"
+    ]
+  },
+  "image#box01": {
+    "props": {
+      "maxHeight": 128,
+      "src": "https://d1.awsstatic.com/webteam/homepage/editorials/Site-Merch_Lightsail_Editorial.f3b6112b81a2512198937a63bc1d23381df43bcb.png"
+    }
+  },
+  "rich-text#box01-titulo": {
+    "props": {
+      "blockClass": [
+        "flexRow--box"
+      ],
+      "font": "t-body",
+      "text": "**Nível gratuito estendido do Amazon Lightsail**",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT",
+      "maxHeight": 56
+    }
+  },
+  "rich-text#box01-texto": {
+    "props": {
+      "blockClass": [
+        "flexRow--box"
+      ],
+      "font": "t-body",
+      "text": "aaaaaaaaaaaa",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT"
+    }
+  },
+  //**********
+  "back-to-top-button": { // https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-backtotopbutton
+    "props": {
+      "displayThreshold": 800
+    }
+  },
+  "list-context.image-list#demo": {
+    "children": [
+      "slider-layout#demo-images"
+    ],
+    "props": {
+      "height": 480,
       "images": [
         {
           "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
           "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+        },
+        {
+          "image": "https://i.ibb.co/vLkkKXv/banner-aws-summit-online-americas.png",
+          "mobileImage": "https://i.ibb.co/vLkkKXv/banner-aws-summit-online-americas.png"
         },
         {
           "image": "https://storecomponents.vteximg.com.br/arquivos/banner.jpg",
@@ -39,11 +121,14 @@
         "phone": 1
       },
       "infinite": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
       "showNavigationArrows": "desktopOnly",
       "blockClass": "carousel"
     }
   },
-
   "rich-text#shelf-title": {
     "props": {
       "text": "## Summer",
@@ -51,11 +136,17 @@
     }
   },
   "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
+    "children": [
+      "list-context.product-list#demo1"
+    ]
   },
   "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
     "props": {
       "orderBy": "OrderByTopSaleDESC"
     }
@@ -72,7 +163,6 @@
       "blockClass": "shelf"
     }
   },
-
   "info-card#home": {
     "props": {
       "id": "info-card-home",
@@ -86,14 +176,24 @@
       "textAlignment": "center"
     }
   },
-
   "rich-text#question": {
     "props": {
       "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
       "blockClass": "question"
     }
   },
-
+  "rich-text#titulo": {
+    "props": {
+      "text": "**--------------------------------**",
+      "blockClass": "question"
+    }
+  },
+  "rich-text#confira-as-solucoes": {
+    "props": {
+      "text": "**Confira as soluções**",
+      "blockClass": "question"
+    }
+  },
   "rich-text#link": {
     "props": {
       "text": "\n**Reach us at**\nwww.vtex.com.br",
